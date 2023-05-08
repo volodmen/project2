@@ -53,6 +53,7 @@ button{
     padding: 0;
     outline: none;
     border: 2px solid transparent;
+    cursor: pointer;
 }
 p{
     margin: 0;
@@ -66,10 +67,10 @@ h1,h2,h3,h4,h5,h6{
 }
 .header{
     padding-top: 22px;
-    margin-bottom: 120px;
+    margin-bottom: 25px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
 }
 .header__services{
     margin-bottom: -10px;
@@ -93,6 +94,8 @@ h1,h2,h3,h4,h5,h6{
 .menu{
 }
 .phones{
+    display: flex;
+    flex-direction: column;
     right: 0;
     top: 26px;
     font-style: normal;
@@ -101,11 +104,71 @@ h1,h2,h3,h4,h5,h6{
 .phones__number{
     text-decoration: none;
     font-size: 26px;
-    margin-bottom: 4px;
+
 }
 .phones__graph{
     font-size: 13px;
     text-decoration: underline;
+    color: #98A4A8;
+
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown:hover .phones__graph {
+    color: #fff;
+}
+
+.dropdown:hover .dropdown__menu {
+    left: 0;
+    opacity: 1;
+}
+.dropdown__list{
+    text-align: left;
+}
+.dropdown__item{
+    color: #1E1F20;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 21px;
+}
+.dropdown__item-bold{
+    font-weight: 700;
+}
+.dropdown__menu {
+    position: relative;
+    background: #EDEDED;
+    border: 1px solid transparent;
+    padding: 12px;
+    width: 157px;
+    height: 68px;
+    top: 100%;
+    margin-top: 8px;
+    opacity: 0;
+    transition: opacity .4s;
+    border-radius: 5px;
+    margin-left: 95px;
+}
+
+.dropdown__menu:before {
+    content: "";
+    display: block;
+    height: 157px;
+    left: 0;
+    right: 0;
+    top: -29px;
+    position: absolute;
+}
+.dropdown__menu::after{
+    content: "";
+    display: inline-block;
+    border: 11px solid transparent;
+    border-bottom-color: #EDEDED;
+    position: absolute;
+    bottom: 100%;
+    left: 93px;
 }
 .menu__item{
     display: inline-block;
@@ -290,7 +353,7 @@ button{
 }
 .paginator--theme--light{
     color: #000;
-    margin-bottom: 43px;
+    margin-bottom: 0px;
 }
 .paginator__item--active{
 
@@ -315,6 +378,13 @@ button{
     color: #FFFFFF;
     background: #F5170E;
 }
+.paginator__item--active--main .paginator__link{
+    background: #FFFFFF;
+    color: #F5170E;
+}
+.paginator__item--active .paginator__link{    
+    color: #FFFFFF;
+    background: #F5170E;}
 .paginator--theme--light .paginator__link:hover{
     color: #FFFFFF;
     background: #F5170E;
@@ -414,6 +484,7 @@ line-height: 27px;
     display: inline-block;
     vertical-align: middle;
     margin-right: 5px;
+    opacity: 0.5;
 }
 .socials__item:last-child{
     margin-right: 0;
@@ -424,6 +495,9 @@ line-height: 27px;
     width: 36px;
     height: 36px;
     background: center center no-repeat;
+}
+.socials__item:hover{
+    opacity: 1;
 }
 .socials__item--icon--telegram .socials__link{
     background-image: url("https://github.com/volodmen/project2/blob/img/img/telegram.png?raw=true");
@@ -460,6 +534,7 @@ line-height: 27px;
     font-size: 72px;
     line-height: 1;
     font-weight: bold;
+    padding-bottom: 86px;
 }
 .breadcrumbs__list{
     display: flex;
@@ -493,16 +568,21 @@ line-height: 27px;
     background: #FFFFFF;
     color: #303030; 
 }
+.container__page{
+    margin-bottom: 86px;
+}
 .services{
     display: flex;
     list-style: none;
     flex-direction: column;
     margin-top: 120px;
-    margin-bottom:12px;
+    margin-bottom:63px;
 }
 .services__item{
     margin-bottom: 50px;
-
+}
+.services__item:last-child{
+    margin-bottom: 0px;
 }
 .services__desc{
 
@@ -552,6 +632,12 @@ line-height: 27px;
     border-color: #F5170E;
     border: 2px solid #F5170E;
 }
+.btn--color--grey{
+    background: #8E8E8E;
+}
+.btn--color--grey:hover{
+    background: #2B2B2B;
+}
 .inner__section{
     background: #F4F5F5;
     color: #1A1B1E;
@@ -560,31 +646,32 @@ line-height: 27px;
 }
 .inner-section--bg--grey{
     background: #F4F5F5;
+    padding-top: 64px;
+    padding-bottom: 94px;
 }
 .inner-section__title{
     font-weight: 700;
     font-size: 48px;
     line-height: 65px;
-    margin-bottom: 75px;
+    margin-bottom: 56px;
     color: #1A1B1E;
-    margin-top: 88px;
-    margin-bottom: 85px;
 }
 .partners{
     display: flex;
     flex-wrap: wrap;
     margin-left: -22px;
     align-items:center;
-    margin-bottom: 44px;
+
 }
 .partners__item{
     margin-left: 20px;
     margin-bottom: 69px;
-
-
 }
 .partners__item:nth-child(4n+1){
     margin-left: 0;
+}
+.partners__item:nth-last-child(-n+4){
+    margin-bottom: 0px;
 }
 
 .partners__logo{
@@ -593,4 +680,239 @@ line-height: 27px;
     width: 270px;
     align-items: center;
     justify-content: center;
+    filter: grayscale(100%);
 }
+.partners__logo:hover{
+    filter: grayscale(0);
+}
+.reviews{
+    column-count: 2;
+    column-gap: 30px;
+    margin-bottom: 61px;
+    margin-top: 102px;
+}
+.review{
+    display: inline-flex;
+    flex-direction: column;
+    padding: 50px 30px;
+    background: #F4F5F5;
+}
+.reviews__item{
+    margin-bottom: 16px;
+}
+.review__header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.review__userdata{
+    margin-left: 25px;
+}
+.review__user{
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #2E77A4;
+    margin-bottom: 11px;
+}
+.review__user:after{
+    content: url(img/vk-blue.pnghttps://github.com/volodmen/project2/blob/img/img/vk-blue.png?raw=true);
+    height: 29px;
+    margin-left: 9px;
+}
+.avatar{
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.reviews__tags{
+    display: flex;
+    align-items: flex-start;
+
+}
+.tag{
+    font-size: 13px;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 50px;
+    background: #e6e6e6;
+    font-weight: 700;
+}
+.tag--bg--green{
+    background: #B9EAE4;
+}
+.review__title{
+    font-size: 30px;
+    color: #1A1B1E;
+    font-weight: 700;
+    margin-bottom: 23px;
+}
+.review__content-text{
+    margin-bottom: 50px;
+}
+.review__content-text p{
+    color: #818181;
+}
+.review__date{
+    font-size: 14px;
+    color: #1A1B1E;
+    font-weight: 700;
+}
+.separator{
+    background: #f3baa6 url(https://github.com/volodmen/project2/blob/img/img/Rectangle.png?raw=true)center no-repeat;
+    min-height: 363px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.separator__content{
+    display: flex;
+    align-items: center;
+    
+}
+.separator__title{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-right: 100px;
+}
+.separator__img{
+    margin-top: 22px;
+}
+.form__row{
+    display: flex;
+    margin-bottom: 30px;
+}
+.form__input{
+    flex: 1;
+    margin-right: 30px;
+    background-repeat: 4px;
+    border: none;
+    background: #fff;
+    padding: 22px 30px;
+    font-size: 18px;
+    color: #1A1B1E;
+}
+.form__input::placeholder{
+    color: #666666;
+}
+.form__input:last-child{
+    margin-right: 0px;
+}
+.form__input--textarea{
+    height: 235px;
+}
+.form__controls{
+    display: flex;
+    margin-bottom: 16px;
+}
+.form__controls-title{
+    width: 40%;
+    color: #1A1B1E;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+}
+.controls{
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+.controls__item{
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+.controls__elem{
+    cursor: pointer;
+}
+.controls__checkbox:checked ~ .controls__tag{
+    background: #B9EAE4;
+}
+.controls__checkbox{
+    display: none;
+}
+.form__btns{
+    display: flex;
+    justify-content:flex-end;
+}
+.form__btn{
+    margin-right: 20px;
+}
+.form__btn:last-child{
+    margin-right: 0px;
+}
+.welcome{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    align-items: center;
+    justify-content: center;
+    background: url(img/bg.pnghttps://github.com/volodmen/project2/blob/img/img/bg.png?raw=true) center bottom / cover no-repeat;
+}
+.welcome__container{
+    display: flex;
+    justify-content: space-evenly;
+    background: url(img/shades.pnghttps://github.com/volodmen/project2/blob/img/img/shades.png?raw=true) center no-repeat;
+    width: 100%;
+    height:100%;
+
+}
+.central{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.central__logo{
+    margin-top: 108px;
+
+}
+.central__desc{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 52px;
+}
+.btn--color--red{
+    display: flex;
+    justify-content: center;
+}
+.central--asia{
+    opacity: 0;
+    animation: zoom .9s ease-in;
+    animation-fill-mode: forwards;
+}
+@keyframes zoom{
+    from{
+        transform: scale(.7);
+    }
+    20%{
+        transform: scale(1.15);
+        
+    }
+    30%{
+        opacity: 1;
+    }
+    40%{
+        transform: scale(.9);
+        
+    }
+    60%{
+        transform: scale(1.1);
+    }
+    80%{
+        transform: scale(.95);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
