@@ -500,16 +500,16 @@ line-height: 27px;
     opacity: 1;
 }
 .socials__item--icon--telegram .socials__link{
-    background-image: url("https://github.com/volodmen/project2/blob/img/img/telegram.png?raw=true");
+    background-image: url("https://github.com/volodmen/project2/blob/main/img/telegram.png?raw=true");
 }
 .socials__item--icon--vk .socials__link{
-    background-image: url("https://github.com/volodmen/project2/blob/img/img/vk.png?raw=true");
+    background-image: url("https://github.com/volodmen/project2/blob/main/img/vk.png?raw=true");
 }
 .socials__item--icon--facebook .socials__link{
-    background-image: url("https://github.com/volodmen/project2/blob/img/img/f.png?raw=true");
+    background-image: url("https://github.com/volodmen/project2/blob/main/img/f.png?raw=true");
 }
 .socials__item--icon--instagram .socials__link{
-    background-image: url("https://github.com/volodmen/project2/blob/img/img/in.png?raw=true");
+    background-image: url("https://github.com/volodmen/project2/blob/main/img/in.png?raw=true");
 }
 .phones__desc{
     line-height: 20px;
@@ -717,7 +717,7 @@ line-height: 27px;
     margin-bottom: 11px;
 }
 .review__user:after{
-    content: url(img/vk-blue.pnghttps://github.com/volodmen/project2/blob/img/img/vk-blue.png?raw=true);
+    content: url(https://github.com/volodmen/project2/blob/main/img/vk-blue.png?raw=true);
     height: 29px;
     margin-left: 9px;
 }
@@ -761,7 +761,7 @@ line-height: 27px;
     font-weight: 700;
 }
 .separator{
-    background: #f3baa6 url(https://github.com/volodmen/project2/blob/img/img/Rectangle.png?raw=true)center no-repeat;
+    background: #f3baa6 url(https://github.com/volodmen/project2/blob/main/img/Rectangle.png?raw=true)center no-repeat;
     min-height: 363px;
     display: flex;
     flex-direction: column;
@@ -852,12 +852,12 @@ line-height: 27px;
     height:100%;
     align-items: center;
     justify-content: center;
-    background: url(img/bg.pnghttps://github.com/volodmen/project2/blob/img/img/bg.png?raw=true) center bottom / cover no-repeat;
+    background: url(https://github.com/volodmen/project2/blob/main/img/bg.png?raw=true) center bottom / cover no-repeat;
 }
 .welcome__container{
     display: flex;
     justify-content: space-evenly;
-    background: url(img/shades.pnghttps://github.com/volodmen/project2/blob/img/img/shades.png?raw=true) center no-repeat;
+    background: url(https://github.com/volodmen/project2/blob/main/img/shades.png?raw=true) center no-repeat;
     width: 100%;
     height:100%;
 
